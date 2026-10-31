@@ -1,12 +1,9 @@
 // ---- Suoni -----------------------------------------------------------
-// Metti i file nella cartella sounds/ con questi nomi (o cambia i nomi qui).
+// A ogni swipe parte un beep a caso tra gli 8 nella cartella sounds/:
+// public_audio_sounds_stratagem-input-beep-1.ogg ... -8.ogg
 // Se un file manca, l'app funziona lo stesso, senza suono.
-const SOUNDS = {
-  up:    "sounds/up.mp3",
-  down:  "sounds/down.mp3",
-  left:  "sounds/left.mp3",
-  right: "sounds/right.mp3",
-};
+const BEEP_COUNT = 8;
+const beepSrc = (n) => `sounds/public_audio_sounds_stratagem-input-beep-${n}.ogg`;
 
 // Rotazione della freccia (il disegno di base punta in su)
 const ROTATION = { up: 0, right: 90, down: 180, left: 270 };
@@ -14,17 +11,22 @@ const ROTATION = { up: 0, right: 90, down: 180, left: 270 };
 const SOGLIA = 30; // pixel di movimento per riconoscere uno swipe
 
 const arrow = document.getElementById("arrow");
-const audio = {};
-for (const [dir, src] of Object.entries(SOUNDS)) {
-  const a = new Audio(src);
+const beeps = [];
+for (let n = 1; n <= BEEP_COUNT; n++) {
+  const a = new Audio(beepSrc(n));
   a.preload = "auto";
-  audio[dir] = a;
+  beeps.push(a);
 }
 
-function play(dir) {
-  const base = audio[dir];
-  if (!base) return;
-  const a = base.cloneNode();       // permette swipe veloci sovrapposti
+let lastBeep = -1;
+
+function play() {
+  // sceglie a caso, ma mai lo stesso suono due volte di fila
+  let i;
+  do { i = Math.floor(Math.random() * BEEP_COUNT); } while (i === lastBeep && BEEP_COUNT > 1);
+  lastBeep = i;
+
+  const a = beeps[i].cloneNode();   // permette swipe veloci sovrapposti
   a.play().catch(() => {});         // file mancante o audio bloccato: ignora
 }
 
@@ -37,7 +39,7 @@ function show(dir) {
 
 function swipe(dir) {
   show(dir);
-  play(dir);
+  play();
 }
 
 // ---- Riconoscimento swipe (ovunque sullo schermo) -------------------------
