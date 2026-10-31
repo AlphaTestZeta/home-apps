@@ -1,6 +1,6 @@
 # Icone degli stratagemmi
 
-Metti qui le icone in formato PNG, con questi nomi (se un'icona manca, l'app mostra il nome dello stratagemma).
+Metti qui le icone (meglio PNG quadrati con sfondo trasparente; vanno bene anche `.svg` e `.webp`), con questi nomi (se un'icona manca, l'app mostra il nome dello stratagemma).
 
 - `orbital-confetti.png` — Orbital Confetti
 - `orbital-precision-strike.png` — Orbital Precision Strike
@@ -90,3 +90,5 @@ Metti qui le icone in formato PNG, con questi nomi (se un'icona manca, l'app mos
 - `a-ac-8-autocannon-sentry.png` — A/AC-8 Autocannon Sentry
 - `a-mls-4x-rocket-sentry.png` — A/MLS-4X Rocket Sentry
 - `a-m-23-ems-mortar-sentry.png` — A/M-23 EMS Mortar Sentry
+
+Per vedere quali mancano ancora: `node tools/missing-icons.js` (dalla cartella `apps/stratagemmi`).

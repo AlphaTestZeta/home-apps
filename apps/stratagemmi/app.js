@@ -24,6 +24,8 @@ function play(audio) {
 
 // ---- Impostazioni ----------------------------------------------------
 const SOGLIA = 30;            // pixel di movimento per riconoscere uno swipe
+const ATTESA_RISULTATO = 500; // ms tra l'ultimo swipe e la comparsa dell'icona
+const DISSOLVENZA = 1000;     // ms: la sequenza in basso svanisce a completamento
 const ATTESA_AMBIGUA = 800;   // ms: se un codice è l'inizio di un altro (es. SOS Beacon / Reinforce)
 const ROTATION = { U: 0, R: 90, D: 180, L: 270 };
 const DIR = { up: "U", right: "R", down: "D", left: "L" };
@@ -34,6 +36,7 @@ const result = document.getElementById("result");
 const icon = document.getElementById("icon");
 const label = document.getElementById("label");
 const seqBox = document.getElementById("seq");
+const resetBtn = document.getElementById("reset");
 
 const ARROW_SVG = '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 8 L92 52 H64 V92 H36 V52 H8 Z" fill="currentColor"/></svg>';
 
@@ -41,8 +44,13 @@ const ARROW_SVG = '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 8 
 let seq = "";
 let timer = null;      // attesa per i codici ambigui
 let errTimer = null;
+let completeTimer = null;   // attesa prima di mostrare l'icona
+let fadeTimer = null;       // dissolvenza della sequenza in basso
+let bloccoInput = false;    // vero dal completamento fino alla chiusura dell'icona
 
 function renderSeq(errore = false) {
+  clearTimeout(fadeTimer);
+  seqBox.classList.remove("svanisce");
   seqBox.classList.toggle("errore", errore);
   seqBox.innerHTML = "";
   for (const d of seq) {
@@ -64,17 +72,38 @@ function reset() {
   renderSeq();
 }
 
+const ESTENSIONI = ["png", "svg", "webp"];   // formati icona provati in ordine
+
+function mostraRisultato(s) {
+  arrow.classList.remove("show");
+  label.textContent = s.name;
+  icon.hidden = true;
+  let i = 0;
+  icon.onload = () => { icon.hidden = false; };
+  icon.onerror = () => {                       // prova il formato dopo; senza icona resta il nome
+    if (++i < ESTENSIONI.length) icon.src = `icons/${s.id}.${ESTENSIONI[i]}`;
+  };
+  icon.src = `icons/${s.id}.${ESTENSIONI[0]}`;
+  result.hidden = false;
+}
+
 function complete(s) {
   clearTimeout(timer);
+  bloccoInput = true;                 // da ora nessun input finché l'icona non viene chiusa
   play(READY);
-  arrow.classList.remove("show");
-  icon.hidden = false;
-  icon.onerror = () => { icon.hidden = true; };   // senza icona resta il nome
-  icon.src = `icons/${s.id}.png`;
-  label.textContent = s.name;
-  result.hidden = false;
+
+  // l'ultima freccia resta visibile, poi compare l'icona
+  clearTimeout(completeTimer);
+  completeTimer = setTimeout(() => mostraRisultato(s), ATTESA_RISULTATO);
+
+  // la sequenza in basso resta intera e svanisce in 1 secondo
+  seqBox.classList.add("svanisce");
+  clearTimeout(fadeTimer);
+  fadeTimer = setTimeout(() => {
+    seqBox.classList.remove("svanisce");
+    seqBox.innerHTML = "";
+  }, DISSOLVENZA);
   seq = "";
-  renderSeq();
 }
 
 function fail() {
@@ -121,8 +150,8 @@ let start = null;
 let bloccato = false;   // gesto iniziato con l'icona visibile: non conta come input
 
 document.addEventListener("pointerdown", (e) => {
-  if (e.target.closest(".back")) return;
-  bloccato = !result.hidden;
+  if (e.target.closest(".back, .reset")) return;
+  bloccato = bloccoInput;
   start = { x: e.clientX, y: e.clientY };
 });
 
@@ -141,7 +170,10 @@ document.addEventListener("pointermove", (e) => {
 });
 
 function fine() {
-  if (bloccato && !result.hidden) result.hidden = true;   // il tocco chiude l'icona, senza input
+  if (bloccato && !result.hidden) {   // il tocco chiude l'icona, senza input
+    result.hidden = true;
+    bloccoInput = false;
+  }
   bloccato = false;
   start = null;
 }
@@ -149,3 +181,12 @@ document.addEventListener("pointerup", fine);
 document.addEventListener("pointercancel", fine);
 
 document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+// ---- Azzera la sequenza (linea in alto al centro), senza suoni ---------------
+resetBtn.addEventListener("pointerdown", (e) => {
+  e.preventDefault();
+  clearTimeout(completeTimer);
+  clearTimeout(errTimer);
+  if (result.hidden) bloccoInput = false;   // se l'icona non c'è ancora, annulla l'attesa
+  reset();
+});

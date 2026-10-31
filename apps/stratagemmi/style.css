@@ -89,3 +89,30 @@ html, body {
 }
 .seq svg { width: 9vmin; height: 9vmin; max-width: 56px; max-height: 56px; color: var(--giallo); }
 .seq.errore svg { color: #ff3b30; }
+
+/* Dissolvenza della sequenza a completamento */
+.seq.svanisce { opacity: 0; transition: opacity 1s linear; }
+
+/* Linea per azzerare la sequenza: sottile, grigia, semi-trasparente */
+.reset {
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(40vw, 220px);
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  z-index: 3;
+  cursor: pointer;
+}
+.reset::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 10px;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(200, 200, 200, .28);
+}
+.reset:active::after { background: rgba(220, 220, 220, .6); }
