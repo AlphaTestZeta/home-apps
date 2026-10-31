@@ -1,0 +1,83 @@
+:root {
+  --teal: #0f6b7a;
+  --blue: #0014ff;
+  --card: min(26.5vw, 57vh);       /* lato dell'icona (quadrata) */
+  --gap: 2.2vw;
+  --radius: 9%;
+  --side: 3.2vw;
+}
+
+@media (max-aspect-ratio: 1/1) {   /* telefono in verticale */
+  :root { --card: 72vw; --gap: 5vw; --side: 8vw; }
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+
+body {
+  background: linear-gradient(to bottom, var(--teal) 0%, var(--teal) 8%, var(--blue) 60%, var(--blue) 100%) no-repeat;
+  background-color: var(--blue);
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7vh;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Carosello */
+.carousel {
+  display: flex;
+  gap: var(--gap);
+  padding: 0 var(--side);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 var(--side);
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  outline: none;
+}
+.carousel::-webkit-scrollbar { display: none; }
+
+.app {
+  flex: 0 0 var(--card);
+  width: var(--card);
+  height: var(--card);
+  border-radius: var(--radius);
+  background: #fff;
+  scroll-snap-align: start;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.app:focus-visible { outline: 4px solid #000; outline-offset: 4px; }
+
+/* Barra di scorrimento personalizzata */
+.track {
+  position: relative;
+  align-self: center;
+  width: 85%;
+  height: 1.8vh;
+  min-height: 12px;
+  background: #fff;
+  border-radius: 999px;
+  touch-action: none;
+  cursor: pointer;
+}
+.thumb {
+  position: absolute;
+  top: 18%;
+  bottom: 18%;
+  left: 0;
+  background: #000;
+  border-radius: 999px;
+  cursor: grab;
+}
+.thumb:active { cursor: grabbing; }
