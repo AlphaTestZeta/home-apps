@@ -1,0 +1,92 @@
+# Icone degli stratagemmi
+
+Metti qui le icone in formato PNG, con questi nomi (se un'icona manca, l'app mostra il nome dello stratagemma).
+
+- `orbital-confetti.png` — Orbital Confetti
+- `orbital-precision-strike.png` — Orbital Precision Strike
+- `orbital-gatling-barrage.png` — Orbital Gatling Barrage
+- `orbital-gas-strike.png` — Orbital Gas Strike
+- `orbital-120mm-he-barrage.png` — Orbital 120mm HE Barrage
+- `orbital-airburst-strike.png` — Orbital Airburst Strike
+- `orbital-smoke-strike.png` — Orbital Smoke Strike
+- `orbital-ems-strike.png` — Orbital EMS Strike
+- `orbital-380mm-he-barrage.png` — Orbital 380mm HE Barrage
+- `orbital-walking-barrage.png` — Orbital Walking Barrage
+- `orbital-laser.png` — Orbital Laser
+- `orbital-napalm-barrage.png` — Orbital Napalm Barrage
+- `orbital-railcannon-strike.png` — Orbital Railcannon Strike
+- `eagle-fly-by.png` — Eagle Fly By
+- `eagle-gas-airstrike.png` — Eagle Gas Airstrike
+- `eagle-strafing-run.png` — Eagle Strafing Run
+- `eagle-airstrike.png` — Eagle Airstrike
+- `eagle-cluster-bomb.png` — Eagle Cluster Bomb
+- `eagle-smoke-strike.png` — Eagle Smoke Strike
+- `eagle-napalm-airstrike.png` — Eagle Napalm Airstrike
+- `eagle-110mm-rocket-pods.png` — Eagle 110mm Rocket Pods
+- `eagle-500kg-bomb.png` — Eagle 500kg Bomb
+- `eagle-rearm.png` — Eagle Rearm
+- `mg-43-machine-gun.png` — MG-43 Machine Gun
+- `eat-17.png` — EAT-17 Expendable Anti-Tank
+- `m-105-stalwart.png` — M-105 Stalwart
+- `las-98-laser-cannon.png` — LAS-98 Laser Cannon
+- `apw-1-anti-materiel-rifle.png` — APW-1 Anti-Materiel Rifle
+- `gr-8-recoilless-rifle.png` — GR-8 Recoilless Rifle
+- `gl-21-grenade-launcher.png` — GL-21 Grenade Launcher
+- `flam-40-flamethrower.png` — FLAM-40 Flamethrower
+- `mg-206-heavy-machine-gun.png` — MG-206 Heavy Machine Gun
+- `ac-8-autocannon.png` — AC-8 Autocannon
+- `arc-3-arc-thrower.png` — ARC-3 Arc Thrower
+- `las-99-quasar-cannon.png` — LAS-99 Quasar Cannon
+- `rl-77-airburst-rocket-launcher.png` — RL-77 Airburst Rocket Launcher
+- `mls-4x-commando.png` — MLS-4X Commando
+- `faf-14-spear.png` — FAF-14 Spear
+- `rs-422-railgun.png` — RS-422 Railgun
+- `sta-x3-wasp-launcher.png` — StA-X3 W.A.S.P. Launcher
+- `amw-20-apex.png` — AMW-20 Apex
+- `cqc-20-breaching-hammer.png` — CQC-20 Breaching Hammer
+- `mgx-42-bullet-storm.png` — MGX-42 Bullet Storm
+- `plas-45-epoch.png` — PLAS-45 Epoch
+- `s-11-speargun.png` — S-11 Speargun
+- `eat-411-leveller.png` — EAT-411 Leveller
+- `eat-700-expendable-napalm.png` — EAT-700 Expendable Napalm
+- `cqc-9-defoliation-tool.png` — CQC-9 Defoliation Tool
+- `gl-52-de-escalator.png` — GL-52 De-Escalator
+- `tx-41-sterilizer.png` — TX-41 Sterilizer
+- `bmd-c4-pack.png` — B/MD C4 Pack
+- `ms-11-solo-silo.png` — MS-11 Solo Silo
+- `bflam-80-cremator.png` — B/FLAM-80 Cremator
+- `cqc-1-one-true-flag.png` — CQC-1 One True Flag
+- `gl-28-belt-fed-grenade-launcher.png` — GL-28 Belt-Fed Grenade Launcher
+- `m-1000-maxigun.png` — M-1000 Maxigun
+- `las-44-nova.png` — LAS-44 Nova
+- `40-k-meltagun.png` — 40-K Meltagun
+- `b-1-supply-pack.png` — B-1 Supply Pack
+- `lift-850-jump-pack.png` — LIFT-850 Jump Pack
+- `sh-20-ballistic-shield-backpack.png` — SH-20 Ballistic Shield Backpack
+- `ax-ar-23-guard-dog.png` — AX/AR-23 Guard Dog
+- `ax-las-5-rover.png` — AX/LAS-5 Rover
+- `sh-32-shield-generator-pack.png` — SH-32 Shield Generator Pack
+- `sh-51-directional-shield.png` — SH-51 Directional Shield
+- `ax-flam-75-hot-dog.png` — AX/FLAM-75 Hot Dog
+- `reinforce.png` — Reinforce
+- `sos-beacon.png` — SOS Beacon
+- `resupply.png` — Resupply
+- `nux-223-hellbomb.png` — NUX-223 Hellbomb
+- `sssd-delivery.png` — SSSD Delivery
+- `seismic-probe.png` — Seismic Probe
+- `upload-data.png` — Upload Data
+- `illumination-flare.png` — Illumination Flare
+- `seaf-artillery.png` — SEAF Artillery
+- `super-earth-flag.png` — Super Earth Flag
+- `exo-45-patriot-exosuit.png` — EXO-45 Patriot Exosuit
+- `e-mg-101-hmg-emplacement.png` — E/MG-101 HMG Emplacement
+- `fx-12-shield-generator-relay.png` — FX-12 Shield Generator Relay
+- `a-arc-3-tesla-tower.png` — A/ARC-3 Tesla Tower
+- `md-6-anti-personnel-minefield.png` — MD-6 Anti-Personnel Minefield
+- `md-14-incendiary-mines.png` — MD-14 Incendiary Mines
+- `a-mg-43-machine-gun-sentry.png` — A/MG-43 Machine Gun Sentry
+- `a-g-16-gatling-sentry.png` — A/G-16 Gatling Sentry
+- `a-m-12-mortar-sentry.png` — A/M-12 Mortar Sentry
+- `a-ac-8-autocannon-sentry.png` — A/AC-8 Autocannon Sentry
+- `a-mls-4x-rocket-sentry.png` — A/MLS-4X Rocket Sentry
+- `a-m-23-ems-mortar-sentry.png` — A/M-23 EMS Mortar Sentry

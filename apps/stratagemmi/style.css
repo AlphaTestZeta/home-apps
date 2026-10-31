@@ -54,3 +54,38 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   .arrow.show { animation-duration: .01s; }
 }
+
+/* Stratagemma attivato */
+.result {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 4vmin;
+  background: var(--nero);
+  z-index: 1;
+}
+.result[hidden] { display: none; }
+.result img { width: min(70vw, 70vh); height: min(70vw, 70vh); object-fit: contain; }
+.result img[hidden] { display: none; }
+.result p {
+  margin: 0;
+  max-width: 80vw;
+  text-align: center;
+  font: 700 clamp(28px, 8vmin, 72px)/1.1 system-ui, sans-serif;
+}
+
+/* Sequenza in basso */
+.seq {
+  position: fixed;
+  left: 0; right: 0;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 5vh);
+  display: flex;
+  justify-content: center;
+  gap: 2vmin;
+  z-index: 2;
+  pointer-events: none;
+}
+.seq svg { width: 9vmin; height: 9vmin; max-width: 56px; max-height: 56px; color: var(--giallo); }
+.seq.errore svg { color: #ff3b30; }

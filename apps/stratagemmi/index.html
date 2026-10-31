@@ -9,11 +9,21 @@
 <body>
   <a class="back" href="../../index.html" aria-label="Torna alla home">&#8249;</a>
 
-  <!-- La freccia mostrata dopo ogni swipe -->
+  <!-- Freccia mostrata a ogni swipe -->
   <svg id="arrow" class="arrow" viewBox="0 0 100 100" aria-hidden="true">
     <path d="M50 8 L92 52 H64 V92 H36 V52 H8 Z" fill="currentColor"/>
   </svg>
 
+  <!-- Stratagemma attivato: resta finché non si tocca lo schermo -->
+  <div id="result" class="result" hidden>
+    <img id="icon" alt="">
+    <p id="label"></p>
+  </div>
+
+  <!-- Sequenza inserita finora -->
+  <div id="seq" class="seq" aria-live="polite"></div>
+
+  <script src="stratagems.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
