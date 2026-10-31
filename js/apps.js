@@ -1,7 +1,7 @@
 // Elenco delle app della home. Per ora sono 7 segnaposto:
 // poi basterà cambiare nome, link e (in futuro) icona qui sotto.
 const APPS = [
-  { id: 1, name: "App 1", url: "#" },
+  { id: 1, name: "Stratagemmi", url: "apps/stratagemmi/index.html" },
   { id: 2, name: "App 2", url: "#" },
   { id: 3, name: "App 3", url: "#" },
   { id: 4, name: "App 4", url: "#" },

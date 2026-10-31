@@ -1,0 +1,56 @@
+:root { --giallo: #ffe800; --nero: #0a0a0a; }
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--nero);
+  color: var(--giallo);
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;              /* niente scroll/zoom: serve solo lo swipe */
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Tasto home: piccolo e quasi nascosto, in alto a sinistra */
+.back {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 6px);
+  left: calc(env(safe-area-inset-left, 0px) + 8px);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  font: 28px/1 system-ui, sans-serif;
+  color: var(--giallo);
+  opacity: .18;
+  text-decoration: none;
+  z-index: 2;
+}
+.back:active { opacity: .6; }
+
+/* Freccia al centro */
+.arrow {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(60vw, 60vh);
+  height: min(60vw, 60vh);
+  opacity: 0;
+  pointer-events: none;
+  transform: rotate(var(--rot, 0deg));
+}
+.arrow.show { animation: flash .7s ease-out forwards; }
+
+@keyframes flash {
+  0%   { opacity: 1; transform: rotate(var(--rot, 0deg)) scale(.9); }
+  15%  { opacity: 1; transform: rotate(var(--rot, 0deg)) scale(1); }
+  100% { opacity: 0; transform: rotate(var(--rot, 0deg)) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow.show { animation-duration: .01s; }
+}
