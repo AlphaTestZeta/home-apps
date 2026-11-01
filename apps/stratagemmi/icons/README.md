@@ -1,124 +1,130 @@
 # Icone degli stratagemmi
 
-Metti qui le icone (meglio PNG quadrati con sfondo trasparente; vanno bene anche `.svg` e `.webp`), con questi nomi (se un'icona manca, l'app mostra il nome dello stratagemma).
+Cartella: `apps/stratagemmi/icons/` — tutte le icone vanno **nella stessa cartella**, senza sottocartelle.
 
-- `orbital-confetti.png` — Orbital Confetti
-- `orbital-precision-strike.png` — Orbital Precision Strike
-- `orbital-gatling-barrage.png` — Orbital Gatling Barrage
-- `orbital-gas-strike.png` — Orbital Gas Strike
-- `orbital-120mm-he-barrage.png` — Orbital 120mm HE Barrage
-- `orbital-airburst-strike.png` — Orbital Airburst Strike
-- `orbital-smoke-strike.png` — Orbital Smoke Strike
-- `orbital-ems-strike.png` — Orbital EMS Strike
-- `orbital-380mm-he-barrage.png` — Orbital 380mm HE Barrage
-- `orbital-walking-barrage.png` — Orbital Walking Barrage
-- `orbital-laser.png` — Orbital Laser
-- `orbital-napalm-barrage.png` — Orbital Napalm Barrage
-- `orbital-railcannon-strike.png` — Orbital Railcannon Strike
-- `eagle-fly-by.png` — Eagle Fly By
-- `eagle-gas-airstrike.png` — Eagle Gas Airstrike
-- `eagle-strafing-run.png` — Eagle Strafing Run
-- `eagle-airstrike.png` — Eagle Airstrike
-- `eagle-cluster-bomb.png` — Eagle Cluster Bomb
-- `eagle-smoke-strike.png` — Eagle Smoke Strike
-- `eagle-napalm-airstrike.png` — Eagle Napalm Airstrike
-- `eagle-110mm-rocket-pods.png` — Eagle 110mm Rocket Pods
-- `eagle-500kg-bomb.png` — Eagle 500kg Bomb
-- `eagle-rearm.png` — Eagle Rearm
-- `mg-43-machine-gun.png` — MG-43 Machine Gun
-- `eat-17.png` — EAT-17 Expendable Anti-Tank
-- `m-105-stalwart.png` — M-105 Stalwart
-- `las-98-laser-cannon.png` — LAS-98 Laser Cannon
-- `apw-1-anti-materiel-rifle.png` — APW-1 Anti-Materiel Rifle
-- `gr-8-recoilless-rifle.png` — GR-8 Recoilless Rifle
-- `gl-21-grenade-launcher.png` — GL-21 Grenade Launcher
-- `flam-40-flamethrower.png` — FLAM-40 Flamethrower
-- `mg-206-heavy-machine-gun.png` — MG-206 Heavy Machine Gun
-- `ac-8-autocannon.png` — AC-8 Autocannon
-- `arc-3-arc-thrower.png` — ARC-3 Arc Thrower
-- `las-99-quasar-cannon.png` — LAS-99 Quasar Cannon
-- `rl-77-airburst-rocket-launcher.png` — RL-77 Airburst Rocket Launcher
-- `mls-4x-commando.png` — MLS-4X Commando
-- `faf-14-spear.png` — FAF-14 Spear
-- `rs-422-railgun.png` — RS-422 Railgun
-- `sta-x3-wasp-launcher.png` — StA-X3 W.A.S.P. Launcher
-- `amw-20-apex.png` — AMW-20 Apex
-- `cqc-20-breaching-hammer.png` — CQC-20 Breaching Hammer
-- `mgx-42-bullet-storm.png` — MGX-42 Bullet Storm
-- `plas-45-epoch.png` — PLAS-45 Epoch
-- `s-11-speargun.png` — S-11 Speargun
-- `eat-411-leveller.png` — EAT-411 Leveller
-- `eat-700-expendable-napalm.png` — EAT-700 Expendable Napalm
-- `cqc-9-defoliation-tool.png` — CQC-9 Defoliation Tool
-- `gl-52-de-escalator.png` — GL-52 De-Escalator
-- `tx-41-sterilizer.png` — TX-41 Sterilizer
-- `bmd-c4-pack.png` — B/MD C4 Pack
-- `ms-11-solo-silo.png` — MS-11 Solo Silo
-- `bflam-80-cremator.png` — B/FLAM-80 Cremator
-- `cqc-1-one-true-flag.png` — CQC-1 One True Flag
-- `gl-28-belt-fed-grenade-launcher.png` — GL-28 Belt-Fed Grenade Launcher
-- `m-1000-maxigun.png` — M-1000 Maxigun
-- `las-44-nova.png` — LAS-44 Nova
-- `40-k-meltagun.png` — 40-K Meltagun
-- `b-1-supply-pack.png` — B-1 Supply Pack
-- `lift-850-jump-pack.png` — LIFT-850 Jump Pack
-- `sh-20-ballistic-shield-backpack.png` — SH-20 Ballistic Shield Backpack
-- `ax-ar-23-guard-dog.png` — AX/AR-23 Guard Dog
-- `ax-las-5-rover.png` — AX/LAS-5 Rover
-- `sh-32-shield-generator-pack.png` — SH-32 Shield Generator Pack
-- `sh-51-directional-shield.png` — SH-51 Directional Shield
-- `ax-flam-75-hot-dog.png` — AX/FLAM-75 Hot Dog
-- `reinforce.png` — Reinforce
-- `sos-beacon.png` — SOS Beacon
-- `resupply.png` — Resupply
-- `nux-223-hellbomb.png` — NUX-223 Hellbomb
-- `sssd-delivery.png` — SSSD Delivery
-- `seismic-probe.png` — Seismic Probe
-- `upload-data.png` — Upload Data
-- `seaf-artillery.png` — SEAF Artillery
-- `super-earth-flag.png` — Super Earth Flag
-- `exo-45-patriot-exosuit.png` — EXO-45 Patriot Exosuit
-- `e-mg-101-hmg-emplacement.png` — E/MG-101 HMG Emplacement
-- `fx-12-shield-generator-relay.png` — FX-12 Shield Generator Relay
-- `a-arc-3-tesla-tower.png` — A/ARC-3 Tesla Tower
-- `md-6-anti-personnel-minefield.png` — MD-6 Anti-Personnel Minefield
-- `md-i4-incendiary-mines.png` — MD-I4 Incendiary Mines
-- `a-mg-43-machine-gun-sentry.png` — A/MG-43 Machine Gun Sentry
-- `a-g-16-gatling-sentry.png` — A/G-16 Gatling Sentry
-- `a-m-12-mortar-sentry.png` — A/M-12 Mortar Sentry
-- `a-ac-8-autocannon-sentry.png` — A/AC-8 Autocannon Sentry
-- `a-mls-4x-rocket-sentry.png` — A/MLS-4X Rocket Sentry
-- `a-m-23-ems-mortar-sentry.png` — A/M-23 EMS Mortar Sentry
-- `tectonic-drill.png` — Tectonic Drill
-- `cargo-container.png` — Cargo Container
-- `activate-e-711-extraction-drill.png` — Activate E-711 Extraction Drill
-- `aquifer-drill.png` — Aquifer Drill
-- `prospecting-drill.png` — Prospecting Drill
-- `ax-arc-3-k-9.png` — AX/ARC-3 K-9
-- `lift-860-hover-pack.png` — LIFT-860 Hover Pack
-- `ax-tx-13-dog-breath.png` — AX/TX-13 Dog Breath
-- `lift-182-warp-pack.png` — LIFT-182 Warp Pack
-- `a-las-98-laser-sentry.png` — A/LAS-98 Laser Sentry
-- `a-flam-40-flame-sentry.png` — A/FLAM-40 Flame Sentry
-- `a-gm-17-gas-mortar-sentry.png` — A/GM-17 Gas Mortar Sentry
-- `e-at-12-anti-tank-emplacement.png` — E/AT-12 Anti-Tank Emplacement
-- `e-gl-21-grenadier-battlement.png` — E/GL-21 Grenadier Battlement
-- `md-17-anti-tank-mines.png` — MD-17 Anti-Tank Mines
-- `md-8-gas-mines.png` — MD-8 Gas Mines
-- `m-104-incinerator-frv.png` — M-104 Incinerator FRV
-- `td-110-maelstrom.png` — TD-110 Maelstrom
-- `m-103-supply-frv.png` — M-103 Supply FRV
-- `m-102-gunner-frv.png` — M-102 Gunner FRV
-- `td-220-bastion-mk-xvi.png` — TD-220 Bastion MK XVI
-- `exo-55-breakthrough-exosuit.png` — EXO-55 Breakthrough Exosuit
-- `exo-51-lumberer-exosuit.png` — EXO-51 Lumberer Exosuit
-- `orbital-illumination-flare.png` — Orbital Illumination Flare
-- `b-100-portable-hellbomb.png` — B-100 Portable Hellbomb
-- `exo-49-emancipator-exosuit.png` — EXO-49 Emancipator Exosuit
-- `call-in-super-destroyer.png` — Call In Super Destroyer
-- `portable-comms-relay.png` — Portable Comms Relay
-- `tactical-video-camera.png` — Tactical Video Camera
-- `hive-breaker-drill.png` — Hive Breaker Drill
-- `dark-fluid-vessel.png` — Dark Fluid Vessel
+Sono quelle di https://github.com/nvigneux/Helldivers-2-Stratagems-icons-svg (nomi dei file invariati). In quella repo sono divise in cartelle per categoria: puoi copiarle a mano oppure usare `sh tools/raccogli-icone.sh <percorso della repo clonata>`.
 
-Per vedere quali mancano ancora: `node tools/missing-icons.js` (dalla cartella `apps/stratagemmi`).
+Per vedere quali mancano: `node tools/missing-icons.js` (dalla cartella `apps/stratagemmi`).
+
+Se un'icona manca, l'app mostra il nome dello stratagemma.
+
+## File attesi
+
+- `orbital-confetti.png` — Orbital Confetti (non c'è nella repo: da procurare)
+- `Orbital Precision Strike.svg` — Orbital Precision Strike
+- `Orbital Gatling Barrage.svg` — Orbital Gatling Barrage
+- `Orbital Gas Strike.svg` — Orbital Gas Strike
+- `Orbital 120MM HE Barrage.svg` — Orbital 120mm HE Barrage
+- `Orbital Airburst Strike.svg` — Orbital Airburst Strike
+- `Orbital Smoke Strike.svg` — Orbital Smoke Strike
+- `Orbital EMS Strike.svg` — Orbital EMS Strike
+- `Orbital 380MM HE Barrage.svg` — Orbital 380mm HE Barrage
+- `Orbital Walking Barrage.svg` — Orbital Walking Barrage
+- `Orbital Laser.svg` — Orbital Laser
+- `Orbital Napalm Barrage.svg` — Orbital Napalm Barrage
+- `Orbital Railcannon Strike.svg` — Orbital Railcannon Strike
+- `eagle-fly-by.png` — Eagle Fly By (non c'è nella repo: da procurare)
+- `Eagle Gas Strike.svg` — Eagle Gas Airstrike
+- `Eagle Strafing Run.svg` — Eagle Strafing Run
+- `Eagle Airstrike.svg` — Eagle Airstrike
+- `Eagle Cluster Bomb.svg` — Eagle Cluster Bomb
+- `Eagle Smoke Strike.svg` — Eagle Smoke Strike
+- `Eagle Napalm Airstrike.svg` — Eagle Napalm Airstrike
+- `Eagle 110MM Rocket Pods.svg` — Eagle 110mm Rocket Pods
+- `Eagle 500KG Bomb.svg` — Eagle 500kg Bomb
+- `Eagle Rearm.svg` — Eagle Rearm
+- `Machine Gun.svg` — MG-43 Machine Gun
+- `Expendable Anti-Tank.svg` — EAT-17 Expendable Anti-Tank
+- `Stalwart.svg` — M-105 Stalwart
+- `Laser Cannon.svg` — LAS-98 Laser Cannon
+- `Anti-Materiel Rifle.svg` — APW-1 Anti-Materiel Rifle
+- `Recoilless Rifle.svg` — GR-8 Recoilless Rifle
+- `Grenade Launcher.svg` — GL-21 Grenade Launcher
+- `Flamethrower.svg` — FLAM-40 Flamethrower
+- `Heavy Machine Gun.svg` — MG-206 Heavy Machine Gun
+- `Autocannon.svg` — AC-8 Autocannon
+- `Arc Thrower.svg` — ARC-3 Arc Thrower
+- `Quasar Cannon.svg` — LAS-99 Quasar Cannon
+- `Airburst Rocket Launcher.svg` — RL-77 Airburst Rocket Launcher
+- `Commando.svg` — MLS-4X Commando
+- `Spear.svg` — FAF-14 Spear
+- `Railgun.svg` — RS-422 Railgun
+- `StA-X3 W.A.S.P. Launcher.svg` — StA-X3 W.A.S.P. Launcher
+- `AMW-20 Apex.svg` — AMW-20 Apex
+- `CQC-20.svg` — CQC-20 Breaching Hammer
+- `Bullet Storm.svg` — MGX-42 Bullet Storm
+- `Epoch.svg` — PLAS-45 Epoch
+- `Speargun.svg` — S-11 Speargun
+- `EAT-411.svg` — EAT-411 Leveller
+- `Expendable Napalm.svg` — EAT-700 Expendable Napalm
+- `Defoliation Tool.svg` — CQC-9 Defoliation Tool
+- `GL-52 De-Escalator.svg` — GL-52 De-Escalator
+- `Sterilizer.svg` — TX-41 Sterilizer
+- `C4 Pack.svg` — B/MD C4 Pack
+- `Solo Silo.svg` — MS-11 Solo Silo
+- `Cremator.svg` — B/FLAM-80 Cremator
+- `One True Flag.svg` — CQC-1 One True Flag
+- `GL-28.svg` — GL-28 Belt-Fed Grenade Launcher
+- `Maxigun.svg` — M-1000 Maxigun
+- `LAS-44 Nova.svg` — LAS-44 Nova
+- `40-K Meltagun.svg` — 40-K Meltagun
+- `Supply Pack.svg` — B-1 Supply Pack
+- `Jump Pack.svg` — LIFT-850 Jump Pack
+- `Ballistic Shield Backpack.svg` — SH-20 Ballistic Shield Backpack
+- `Guard Dog.svg` — AX/AR-23 Guard Dog
+- `Guard Dog Rover.svg` — AX/LAS-5 Rover
+- `Shield Generator Pack.svg` — SH-32 Shield Generator Pack
+- `Directional Shield.svg` — SH-51 Directional Shield
+- `Guard Dog Hot Dog.svg` — AX/FLAM-75 Hot Dog
+- `Reinforce.svg` — Reinforce
+- `SOS Beacon.svg` — SOS Beacon
+- `Resupply.svg` — Resupply
+- `Hellbomb.svg` — NUX-223 Hellbomb
+- `Upload Data.svg` — SSSD Delivery
+- `Seismic Probe.svg` — Seismic Probe
+- `Upload Data.svg` — Upload Data
+- `SEAF Artillery.svg` — SEAF Artillery
+- `Super Earth Flag.svg` — Super Earth Flag
+- `Patriot Exosuit.svg` — EXO-45 Patriot Exosuit
+- `HMG Emplacement.svg` — E/MG-101 HMG Emplacement
+- `Shield Generator Relay.svg` — FX-12 Shield Generator Relay
+- `Tesla Tower.svg` — A/ARC-3 Tesla Tower
+- `Anti-Personnel Minefield.svg` — MD-6 Anti-Personnel Minefield
+- `Incendiary Mines.svg` — MD-I4 Incendiary Mines
+- `Machine Gun Sentry.svg` — A/MG-43 Machine Gun Sentry
+- `Gatling Sentry.svg` — A/G-16 Gatling Sentry
+- `Mortar Sentry.svg` — A/M-12 Mortar Sentry
+- `Autocannon Sentry.svg` — A/AC-8 Autocannon Sentry
+- `Rocket Sentry.svg` — A/MLS-4X Rocket Sentry
+- `EMS Mortar Sentry.svg` — A/M-23 EMS Mortar Sentry
+- `Tectonic Drill.svg` — Tectonic Drill
+- `Cargo Container.svg` — Cargo Container
+- `Prospecting Drill.svg` — Activate E-711 Extraction Drill
+- `Prospecting Drill.svg` — Aquifer Drill
+- `Prospecting Drill.svg` — Prospecting Drill
+- `Guard Dog K-9.svg` — AX/ARC-3 K-9
+- `Hover Pack.svg` — LIFT-860 Hover Pack
+- `Guard Dog Breath.svg` — AX/TX-13 Dog Breath
+- `Warp Pack.svg` — LIFT-182 Warp Pack
+- `Laser Sentry.svg` — A/LAS-98 Laser Sentry
+- `Flame Sentry.svg` — A/FLAM-40 Flame Sentry
+- `Gas Mortar Sentry.svg` — A/GM-17 Gas Mortar Sentry
+- `Anti-Tank Emplacement.svg` — E/AT-12 Anti-Tank Emplacement
+- `Grenadier Battlement.svg` — E/GL-21 Grenadier Battlement
+- `Anti-Tank Mines.svg` — MD-17 Anti-Tank Mines
+- `Gas Mine.svg` — MD-8 Gas Mines
+- `Incinerator FRV.svg` — M-104 Incinerator FRV
+- `TD-110 Maelstrom.svg` — TD-110 Maelstrom
+- `Supply FRV.svg` — M-103 Supply FRV
+- `Fast Recon Vehicle.svg` — M-102 Gunner FRV
+- `Bastion MK XVI.svg` — TD-220 Bastion MK XVI
+- `Breakthrough Exosuit.svg` — EXO-55 Breakthrough Exosuit
+- `Lumberer Exosuit.svg` — EXO-51 Lumberer Exosuit
+- `Orbital Illumination Flare.svg` — Orbital Illumination Flare
+- `Hellbomb Portable.svg` — B-100 Portable Hellbomb
+- `Emancipator Exosuit.svg` — EXO-49 Emancipator Exosuit
+- `Call In Super Destroyer.svg` — Call In Super Destroyer
+- `Cargo Container.svg` — Portable Comms Relay
+- `tactical-video-camera.png` — Tactical Video Camera (non c'è nella repo: da procurare)
+- `Hive Breaker Drill.svg` — Hive Breaker Drill
+- `Dark Fluid Vessel.svg` — Dark Fluid Vessel

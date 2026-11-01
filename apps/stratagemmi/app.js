@@ -72,18 +72,21 @@ function reset() {
   renderSeq();
 }
 
-const ESTENSIONI = ["png", "svg", "webp"];   // formati icona provati in ordine
+const ESTENSIONI = ["png", "svg", "webp"];   // formati provati se manca il campo "icon"
 
 function mostraRisultato(s) {
   arrow.classList.remove("show");
   label.textContent = s.name;
   icon.hidden = true;
+
+  // prima il file indicato in "icon", poi icons/<id>.png/.svg/.webp; senza icona resta il nome
+  const urls = [];
+  if (s.icon) urls.push(`icons/${encodeURIComponent(s.icon)}`);
+  for (const e of ESTENSIONI) urls.push(`icons/${s.id}.${e}`);
   let i = 0;
   icon.onload = () => { icon.hidden = false; };
-  icon.onerror = () => {                       // prova il formato dopo; senza icona resta il nome
-    if (++i < ESTENSIONI.length) icon.src = `icons/${s.id}.${ESTENSIONI[i]}`;
-  };
-  icon.src = `icons/${s.id}.${ESTENSIONI[0]}`;
+  icon.onerror = () => { if (++i < urls.length) icon.src = urls[i]; };
+  icon.src = urls[0];
   result.hidden = false;
 }
 
