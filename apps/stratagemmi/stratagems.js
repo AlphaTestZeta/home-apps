@@ -1,9 +1,8 @@
 // Elenco degli stratagemmi. Codice: U=su, D=giù, L=sinistra, R=destra.
-// Icona attesa in icons/<id>.png (se manca, viene mostrato il nome).
-// fonte "w" = helldivers.wiki.gg, "c" = fonte secondaria, da verificare.
-// Per aggiungerne uno basta una riga nuova.
+// Icona attesa in icons/<id>.png (anche .svg o .webp; se manca viene mostrato il nome).
+// fonte: "w" = verificato sulla wiki (helldivers.wiki.gg, pagina "Stratagems")
+// Per aggiungere uno stratagemma basta una riga nuova; in caso di dubbio vince la wiki.
 const STRATAGEMS = [
-  // --- Orbitali ---
   { id: "orbital-confetti", name: "Orbital Confetti", code: "RDDUUDDUU", fonte: "w" },
   { id: "orbital-precision-strike", name: "Orbital Precision Strike", code: "RRU", fonte: "w" },
   { id: "orbital-gatling-barrage", name: "Orbital Gatling Barrage", code: "RDLUU", fonte: "w" },
@@ -17,8 +16,6 @@ const STRATAGEMS = [
   { id: "orbital-laser", name: "Orbital Laser", code: "RDURD", fonte: "w" },
   { id: "orbital-napalm-barrage", name: "Orbital Napalm Barrage", code: "RRDLRU", fonte: "w" },
   { id: "orbital-railcannon-strike", name: "Orbital Railcannon Strike", code: "RUDDR", fonte: "w" },
-
-  // --- Eagle ---
   { id: "eagle-fly-by", name: "Eagle Fly By", code: "UDDUUDDUU", fonte: "w" },
   { id: "eagle-gas-airstrike", name: "Eagle Gas Airstrike", code: "URLR", fonte: "w" },
   { id: "eagle-strafing-run", name: "Eagle Strafing Run", code: "URR", fonte: "w" },
@@ -28,9 +25,7 @@ const STRATAGEMS = [
   { id: "eagle-napalm-airstrike", name: "Eagle Napalm Airstrike", code: "URDU", fonte: "w" },
   { id: "eagle-110mm-rocket-pods", name: "Eagle 110mm Rocket Pods", code: "URUL", fonte: "w" },
   { id: "eagle-500kg-bomb", name: "Eagle 500kg Bomb", code: "URDDD", fonte: "w" },
-  { id: "eagle-rearm", name: "Eagle Rearm", code: "UULUR", fonte: "c" },
-
-  // --- Armi di supporto ---
+  { id: "eagle-rearm", name: "Eagle Rearm", code: "UULUR", fonte: "w" },
   { id: "mg-43-machine-gun", name: "MG-43 Machine Gun", code: "DLDUR", fonte: "w" },
   { id: "eat-17", name: "EAT-17 Expendable Anti-Tank", code: "DDLUR", fonte: "w" },
   { id: "m-105-stalwart", name: "M-105 Stalwart", code: "DLDUUL", fonte: "w" },
@@ -66,8 +61,6 @@ const STRATAGEMS = [
   { id: "m-1000-maxigun", name: "M-1000 Maxigun", code: "DLRDUU", fonte: "w" },
   { id: "las-44-nova", name: "LAS-44 Nova", code: "DLRDD", fonte: "w" },
   { id: "40-k-meltagun", name: "40-K Meltagun", code: "DLULLD", fonte: "w" },
-
-  // --- Zaini ---
   { id: "b-1-supply-pack", name: "B-1 Supply Pack", code: "DLDUUD", fonte: "w" },
   { id: "lift-850-jump-pack", name: "LIFT-850 Jump Pack", code: "DUUDU", fonte: "w" },
   { id: "sh-20-ballistic-shield-backpack", name: "SH-20 Ballistic Shield Backpack", code: "DLDDUL", fonte: "w" },
@@ -76,32 +69,57 @@ const STRATAGEMS = [
   { id: "sh-32-shield-generator-pack", name: "SH-32 Shield Generator Pack", code: "DULRLR", fonte: "w" },
   { id: "sh-51-directional-shield", name: "SH-51 Directional Shield", code: "DULRUU", fonte: "w" },
   { id: "ax-flam-75-hot-dog", name: "AX/FLAM-75 Hot Dog", code: "DULULL", fonte: "w" },
-
-  // --- Missione / utilità ---
-  { id: "reinforce", name: "Reinforce", code: "UDRLU", fonte: "c" },
-  { id: "sos-beacon", name: "SOS Beacon", code: "UDRL", fonte: "c" },
-  { id: "resupply", name: "Resupply", code: "DDUR", fonte: "c" },
-  { id: "nux-223-hellbomb", name: "NUX-223 Hellbomb", code: "DULDURDU", fonte: "c" },
-  { id: "sssd-delivery", name: "SSSD Delivery", code: "DDDUU", fonte: "c" },
-  { id: "seismic-probe", name: "Seismic Probe", code: "UULRDD", fonte: "c" },
-  { id: "upload-data", name: "Upload Data", code: "LRUUU", fonte: "c" },
-  { id: "illumination-flare", name: "Illumination Flare", code: "RRLL", fonte: "c" },
-  { id: "seaf-artillery", name: "SEAF Artillery", code: "RUUD", fonte: "c" },
-  { id: "super-earth-flag", name: "Super Earth Flag", code: "DUDU", fonte: "c" },
-
-  // --- Veicoli ---
-  { id: "exo-45-patriot-exosuit", name: "EXO-45 Patriot Exosuit", code: "LDRULDD", fonte: "c" },
-
-  // --- Difese: postazioni, mine, torrette ---
-  { id: "e-mg-101-hmg-emplacement", name: "E/MG-101 HMG Emplacement", code: "DULRRL", fonte: "c" },
-  { id: "fx-12-shield-generator-relay", name: "FX-12 Shield Generator Relay", code: "DDLRLR", fonte: "c" },
-  { id: "a-arc-3-tesla-tower", name: "A/ARC-3 Tesla Tower", code: "DURULR", fonte: "c" },
-  { id: "md-6-anti-personnel-minefield", name: "MD-6 Anti-Personnel Minefield", code: "DLUR", fonte: "c" },
-  { id: "md-14-incendiary-mines", name: "MD-14 Incendiary Mines", code: "DLLD", fonte: "c" },
-  { id: "a-mg-43-machine-gun-sentry", name: "A/MG-43 Machine Gun Sentry", code: "DURRU", fonte: "c" },
-  { id: "a-g-16-gatling-sentry", name: "A/G-16 Gatling Sentry", code: "DURL", fonte: "c" },
-  { id: "a-m-12-mortar-sentry", name: "A/M-12 Mortar Sentry", code: "DURRD", fonte: "c" },
-  { id: "a-ac-8-autocannon-sentry", name: "A/AC-8 Autocannon Sentry", code: "DURULU", fonte: "c" },
-  { id: "a-mls-4x-rocket-sentry", name: "A/MLS-4X Rocket Sentry", code: "DURRL", fonte: "c" },
-  { id: "a-m-23-ems-mortar-sentry", name: "A/M-23 EMS Mortar Sentry", code: "DURDR", fonte: "c" },
+  { id: "reinforce", name: "Reinforce", code: "UDRLU", fonte: "w" },
+  { id: "sos-beacon", name: "SOS Beacon", code: "UDRU", fonte: "w" },
+  { id: "resupply", name: "Resupply", code: "DDUR", fonte: "w" },
+  { id: "nux-223-hellbomb", name: "NUX-223 Hellbomb", code: "DULDURDU", fonte: "w" },
+  { id: "sssd-delivery", name: "SSSD Delivery", code: "DDDDDUU", fonte: "w" },
+  { id: "seismic-probe", name: "Seismic Probe", code: "UULRDD", fonte: "w" },
+  { id: "upload-data", name: "Upload Data", code: "LRUUU", fonte: "w" },
+  { id: "seaf-artillery", name: "SEAF Artillery", code: "RUUD", fonte: "w" },
+  { id: "super-earth-flag", name: "Super Earth Flag", code: "DUDU", fonte: "w" },
+  { id: "exo-45-patriot-exosuit", name: "EXO-45 Patriot Exosuit", code: "LDRULDD", fonte: "w" },
+  { id: "e-mg-101-hmg-emplacement", name: "E/MG-101 HMG Emplacement", code: "DULRRL", fonte: "w" },
+  { id: "fx-12-shield-generator-relay", name: "FX-12 Shield Generator Relay", code: "DDLRLR", fonte: "w" },
+  { id: "a-arc-3-tesla-tower", name: "A/ARC-3 Tesla Tower", code: "DURULR", fonte: "w" },
+  { id: "md-6-anti-personnel-minefield", name: "MD-6 Anti-Personnel Minefield", code: "DLUR", fonte: "w" },
+  { id: "md-i4-incendiary-mines", name: "MD-I4 Incendiary Mines", code: "DLLD", fonte: "w" },
+  { id: "a-mg-43-machine-gun-sentry", name: "A/MG-43 Machine Gun Sentry", code: "DURRU", fonte: "w" },
+  { id: "a-g-16-gatling-sentry", name: "A/G-16 Gatling Sentry", code: "DURL", fonte: "w" },
+  { id: "a-m-12-mortar-sentry", name: "A/M-12 Mortar Sentry", code: "DURRD", fonte: "w" },
+  { id: "a-ac-8-autocannon-sentry", name: "A/AC-8 Autocannon Sentry", code: "DURULU", fonte: "w" },
+  { id: "a-mls-4x-rocket-sentry", name: "A/MLS-4X Rocket Sentry", code: "DURRL", fonte: "w" },
+  { id: "a-m-23-ems-mortar-sentry", name: "A/M-23 EMS Mortar Sentry", code: "DURDR", fonte: "w" },
+  { id: "tectonic-drill", name: "Tectonic Drill", code: "UDUDUD", fonte: "w" },
+  { id: "cargo-container", name: "Cargo Container", code: "UUDDRD", fonte: "w" },
+  { id: "activate-e-711-extraction-drill", name: "Activate E-711 Extraction Drill", code: "DDLLDD", fonte: "w" },
+  { id: "aquifer-drill", name: "Aquifer Drill", code: "LLLUDRDD", fonte: "w" },
+  { id: "prospecting-drill", name: "Prospecting Drill", code: "DDLRDD", fonte: "w" },
+  { id: "ax-arc-3-k-9", name: "AX/ARC-3 K-9", code: "DULURL", fonte: "w" },
+  { id: "lift-860-hover-pack", name: "LIFT-860 Hover Pack", code: "DUUDLR", fonte: "w" },
+  { id: "ax-tx-13-dog-breath", name: "AX/TX-13 Dog Breath", code: "DULURU", fonte: "w" },
+  { id: "lift-182-warp-pack", name: "LIFT-182 Warp Pack", code: "DLRDLR", fonte: "w" },
+  { id: "a-las-98-laser-sentry", name: "A/LAS-98 Laser Sentry", code: "DURDUR", fonte: "w" },
+  { id: "a-flam-40-flame-sentry", name: "A/FLAM-40 Flame Sentry", code: "DURDUU", fonte: "w" },
+  { id: "a-gm-17-gas-mortar-sentry", name: "A/GM-17 Gas Mortar Sentry", code: "DURDL", fonte: "w" },
+  { id: "e-at-12-anti-tank-emplacement", name: "E/AT-12 Anti-Tank Emplacement", code: "DULRRR", fonte: "w" },
+  { id: "e-gl-21-grenadier-battlement", name: "E/GL-21 Grenadier Battlement", code: "DRDLR", fonte: "w" },
+  { id: "md-17-anti-tank-mines", name: "MD-17 Anti-Tank Mines", code: "DLUU", fonte: "w" },
+  { id: "md-8-gas-mines", name: "MD-8 Gas Mines", code: "DLLR", fonte: "w" },
+  { id: "m-104-incinerator-frv", name: "M-104 Incinerator FRV", code: "LDRLDUU", fonte: "w" },
+  { id: "td-110-maelstrom", name: "TD-110 Maelstrom", code: "LDRDLDULR", fonte: "w" },
+  { id: "m-103-supply-frv", name: "M-103 Supply FRV", code: "LDLLDUR", fonte: "w" },
+  { id: "m-102-gunner-frv", name: "M-102 Gunner FRV", code: "LDRDRDU", fonte: "w" },
+  { id: "td-220-bastion-mk-xvi", name: "TD-220 Bastion MK XVI", code: "LDRDLDUDU", fonte: "w" },
+  { id: "exo-55-breakthrough-exosuit", name: "EXO-55 Breakthrough Exosuit", code: "LDRLRDU", fonte: "w" },
+  { id: "exo-51-lumberer-exosuit", name: "EXO-51 Lumberer Exosuit", code: "LDRURLU", fonte: "w" },
+  // --- Aggiunti dalla schermata della wiki ---
+  { id: "orbital-illumination-flare", name: "Orbital Illumination Flare", code: "RRLL", fonte: "w" },
+  { id: "b-100-portable-hellbomb", name: "B-100 Portable Hellbomb", code: "DRUUU", fonte: "w" },
+  { id: "exo-49-emancipator-exosuit", name: "EXO-49 Emancipator Exosuit", code: "LDRULDU", fonte: "w" },
+  { id: "call-in-super-destroyer", name: "Call In Super Destroyer", code: "UUDDLRLR", fonte: "w" },
+  { id: "portable-comms-relay", name: "Portable Comms Relay", code: "UUDDLLD", fonte: "w" },
+  { id: "tactical-video-camera", name: "Tactical Video Camera", code: "RDDULLU", fonte: "w" },
+  { id: "hive-breaker-drill", name: "Hive Breaker Drill", code: "LUDRDD", fonte: "w" },
+  { id: "dark-fluid-vessel", name: "Dark Fluid Vessel", code: "ULRDUU", fonte: "w" },
 ];

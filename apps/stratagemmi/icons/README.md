@@ -75,7 +75,6 @@ Metti qui le icone (meglio PNG quadrati con sfondo trasparente; vanno bene anche
 - `sssd-delivery.png` — SSSD Delivery
 - `seismic-probe.png` — Seismic Probe
 - `upload-data.png` — Upload Data
-- `illumination-flare.png` — Illumination Flare
 - `seaf-artillery.png` — SEAF Artillery
 - `super-earth-flag.png` — Super Earth Flag
 - `exo-45-patriot-exosuit.png` — EXO-45 Patriot Exosuit
@@ -83,12 +82,43 @@ Metti qui le icone (meglio PNG quadrati con sfondo trasparente; vanno bene anche
 - `fx-12-shield-generator-relay.png` — FX-12 Shield Generator Relay
 - `a-arc-3-tesla-tower.png` — A/ARC-3 Tesla Tower
 - `md-6-anti-personnel-minefield.png` — MD-6 Anti-Personnel Minefield
-- `md-14-incendiary-mines.png` — MD-14 Incendiary Mines
+- `md-i4-incendiary-mines.png` — MD-I4 Incendiary Mines
 - `a-mg-43-machine-gun-sentry.png` — A/MG-43 Machine Gun Sentry
 - `a-g-16-gatling-sentry.png` — A/G-16 Gatling Sentry
 - `a-m-12-mortar-sentry.png` — A/M-12 Mortar Sentry
 - `a-ac-8-autocannon-sentry.png` — A/AC-8 Autocannon Sentry
 - `a-mls-4x-rocket-sentry.png` — A/MLS-4X Rocket Sentry
 - `a-m-23-ems-mortar-sentry.png` — A/M-23 EMS Mortar Sentry
+- `tectonic-drill.png` — Tectonic Drill
+- `cargo-container.png` — Cargo Container
+- `activate-e-711-extraction-drill.png` — Activate E-711 Extraction Drill
+- `aquifer-drill.png` — Aquifer Drill
+- `prospecting-drill.png` — Prospecting Drill
+- `ax-arc-3-k-9.png` — AX/ARC-3 K-9
+- `lift-860-hover-pack.png` — LIFT-860 Hover Pack
+- `ax-tx-13-dog-breath.png` — AX/TX-13 Dog Breath
+- `lift-182-warp-pack.png` — LIFT-182 Warp Pack
+- `a-las-98-laser-sentry.png` — A/LAS-98 Laser Sentry
+- `a-flam-40-flame-sentry.png` — A/FLAM-40 Flame Sentry
+- `a-gm-17-gas-mortar-sentry.png` — A/GM-17 Gas Mortar Sentry
+- `e-at-12-anti-tank-emplacement.png` — E/AT-12 Anti-Tank Emplacement
+- `e-gl-21-grenadier-battlement.png` — E/GL-21 Grenadier Battlement
+- `md-17-anti-tank-mines.png` — MD-17 Anti-Tank Mines
+- `md-8-gas-mines.png` — MD-8 Gas Mines
+- `m-104-incinerator-frv.png` — M-104 Incinerator FRV
+- `td-110-maelstrom.png` — TD-110 Maelstrom
+- `m-103-supply-frv.png` — M-103 Supply FRV
+- `m-102-gunner-frv.png` — M-102 Gunner FRV
+- `td-220-bastion-mk-xvi.png` — TD-220 Bastion MK XVI
+- `exo-55-breakthrough-exosuit.png` — EXO-55 Breakthrough Exosuit
+- `exo-51-lumberer-exosuit.png` — EXO-51 Lumberer Exosuit
+- `orbital-illumination-flare.png` — Orbital Illumination Flare
+- `b-100-portable-hellbomb.png` — B-100 Portable Hellbomb
+- `exo-49-emancipator-exosuit.png` — EXO-49 Emancipator Exosuit
+- `call-in-super-destroyer.png` — Call In Super Destroyer
+- `portable-comms-relay.png` — Portable Comms Relay
+- `tactical-video-camera.png` — Tactical Video Camera
+- `hive-breaker-drill.png` — Hive Breaker Drill
+- `dark-fluid-vessel.png` — Dark Fluid Vessel
 
 Per vedere quali mancano ancora: `node tools/missing-icons.js` (dalla cartella `apps/stratagemmi`).

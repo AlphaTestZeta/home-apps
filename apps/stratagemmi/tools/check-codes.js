@@ -15,3 +15,6 @@ for (const a of S) for (const b of S)
     console.log("Prefisso:", a.name, `(${a.code})`, "è l'inizio di", b.name, `(${b.code})`); problemi++;
   }
 console.log(`${S.length} stratagemmi, ${problemi} problemi`);
+const nonVerificati = S.filter((s) => s.fonte !== "w");
+console.log(`Verificati sulla wiki: ${S.length - nonVerificati.length} — da verificare: ${nonVerificati.length}`);
+if (process.argv.includes("--elenco")) nonVerificati.forEach((s) => console.log(`  ${s.name} (${s.code}) [${s.fonte}]`));
