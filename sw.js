@@ -1,6 +1,6 @@
 // Service worker: tiene l'app in memoria, così funziona anche senza rete.
 // L'elenco dei file e la versione si aggiornano con:  node tools/aggiorna-sw.js
-const VERSION = "v06069083";
+const VERSION = "v5802de37";
 const CACHE = "home-apps-" + VERSION;
 const ARCHIVIO = [
 // <ARCHIVIO>

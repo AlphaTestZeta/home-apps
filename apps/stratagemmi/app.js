@@ -216,11 +216,17 @@ document.addEventListener("visibilitychange", () => {
   if (document.visibilityState === "visible") tieniAcceso();
 });
 
+// Blocca l'orientamento in orizzontale (Chrome/Android, in schermo intero o da app installata)
+function bloccaOrizzontale() {
+  try { screen.orientation?.lock?.("landscape")?.catch(() => {}); } catch (e) { /* non supportato */ }
+}
+
 // Al primo tocco (serve un gesto dell'utente): schermo intero, se la pagina non è già installata
 document.addEventListener("pointerup", function primoTocco() {
   document.removeEventListener("pointerup", primoTocco);
   tieniAcceso();
-  if (!installata && document.fullscreenEnabled && !document.fullscreenElement) {
-    document.documentElement.requestFullscreen({ navigationUI: "hide" }).catch(() => {});
+  if (installata) { bloccaOrizzontale(); return; }
+  if (document.fullscreenEnabled && !document.fullscreenElement) {
+    document.documentElement.requestFullscreen({ navigationUI: "hide" }).then(bloccaOrizzontale).catch(() => {});
   }
 });

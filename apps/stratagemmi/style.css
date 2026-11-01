@@ -122,3 +122,20 @@ html, body {
   background: rgba(200, 200, 200, .28);
 }
 .reset:active::after { background: rgba(220, 220, 220, .6); }
+
+/* Telefono in verticale: l'app va usata in orizzontale */
+@media (orientation: portrait) and (pointer: coarse) {
+  body::after {
+    content: "Ruota il telefono in orizzontale";
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 10vw;
+    text-align: center;
+    font: 700 6vw/1.2 system-ui, sans-serif;
+    color: #fff;
+    background: rgba(0, 0, 0, .92);
+    z-index: 100;
+  }
+}
