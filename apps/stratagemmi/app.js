@@ -33,8 +33,6 @@ const DIR = { up: "U", right: "R", down: "D", left: "L" };
 // ---- Elementi --------------------------------------------------------
 const arrow = document.getElementById("arrow");
 const result = document.getElementById("result");
-const icon = document.getElementById("icon");
-const label = document.getElementById("label");
 const seqBox = document.getElementById("seq");
 const resetBtn = document.getElementById("reset");
 
@@ -74,30 +72,41 @@ function reset() {
 
 const ESTENSIONI = ["png", "svg", "webp"];   // formati provati se manca il campo "icon"
 
-function mostraRisultato(s) {
+function mostraRisultato(lista) {
   arrow.classList.remove("show");
-  label.textContent = s.name;
-  icon.hidden = true;
+  result.replaceChildren();
+  result.style.setProperty("--n", lista.length);
+  for (const s of lista) {
+    const fig = document.createElement("figure");
+    const img = document.createElement("img");
+    const cap = document.createElement("figcaption");
+    cap.textContent = s.name;
+    img.alt = "";
+    img.hidden = true;
 
-  // prima il file indicato in "icon", poi icons/<id>.png/.svg/.webp; senza icona resta il nome
-  const urls = [];
-  if (s.icon) urls.push(`icons/${encodeURIComponent(s.icon)}`);
-  for (const e of ESTENSIONI) urls.push(`icons/${s.id}.${e}`);
-  let i = 0;
-  icon.onload = () => { icon.hidden = false; };
-  icon.onerror = () => { if (++i < urls.length) icon.src = urls[i]; };
-  icon.src = urls[0];
+    // prima il file indicato in "icon", poi icons/<id>.png/.svg/.webp; senza icona resta il nome
+    const urls = [];
+    if (s.icon) urls.push(`icons/${encodeURIComponent(s.icon)}`);
+    for (const e of ESTENSIONI) urls.push(`icons/${s.id}.${e}`);
+    let i = 0;
+    img.onload = () => { img.hidden = false; };
+    img.onerror = () => { if (++i < urls.length) img.src = urls[i]; };
+    img.src = urls[0];
+
+    fig.append(img, cap);
+    result.append(fig);
+  }
   result.hidden = false;
 }
 
-function complete(s) {
+function complete(lista) {
   clearTimeout(timer);
   bloccoInput = true;                 // da ora nessun input finché l'icona non viene chiusa
   play(READY);
 
   // l'ultima freccia resta visibile, poi compare l'icona
   clearTimeout(completeTimer);
-  completeTimer = setTimeout(() => mostraRisultato(s), ATTESA_RISULTATO);
+  completeTimer = setTimeout(() => mostraRisultato(lista), ATTESA_RISULTATO);
 
   // la sequenza in basso resta intera e svanisce in 1 secondo
   seqBox.classList.add("svanisce");
@@ -136,15 +145,16 @@ function input(d) {
   renderSeq();
   flash(d);
 
-  const esatto = candidati.find((s) => s.code === next);
-  if (!esatto) { playRandom(BEEPS); return; }
+  // più stratagemmi di missione possono condividere lo stesso codice: li mostro tutti
+  const esatti = candidati.filter((s) => s.code === next);
+  if (esatti.length === 0) { playRandom(BEEPS); return; }
 
-  const altri = candidati.length > 1;   // codice che prosegue in un altro più lungo
-  if (altri) {
+  const prosegue = candidati.some((s) => s.code.length > next.length);   // inizio di un codice più lungo
+  if (prosegue) {
     playRandom(BEEPS);
-    timer = setTimeout(() => complete(esatto), ATTESA_AMBIGUA);
+    timer = setTimeout(() => complete(esatti), ATTESA_AMBIGUA);
   } else {
-    complete(esatto);
+    complete(esatti);
   }
 }
 
@@ -192,4 +202,25 @@ resetBtn.addEventListener("pointerdown", (e) => {
   clearTimeout(errTimer);
   if (result.hidden) bloccoInput = false;   // se l'icona non c'è ancora, annulla l'attesa
   reset();
+});
+
+// ---- Schermo intero e schermo sempre acceso -----------------------------------
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("../../sw.js").catch(() => {});
+
+const installata = matchMedia("(display-mode: fullscreen), (display-mode: standalone)").matches || navigator.standalone;
+
+async function tieniAcceso() {
+  try { await navigator.wakeLock?.request("screen"); } catch (e) { /* non supportato: pazienza */ }
+}
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") tieniAcceso();
+});
+
+// Al primo tocco (serve un gesto dell'utente): schermo intero, se la pagina non è già installata
+document.addEventListener("pointerup", function primoTocco() {
+  document.removeEventListener("pointerup", primoTocco);
+  tieniAcceso();
+  if (!installata && document.fullscreenEnabled && !document.fullscreenElement) {
+    document.documentElement.requestFullscreen({ navigationUI: "hide" }).catch(() => {});
+  }
 });

@@ -123,4 +123,5 @@ const STRATAGEMS = [
   { id: "tactical-video-camera", name: "Tactical Video Camera", code: "RDDULLU", fonte: "w" },
   { id: "hive-breaker-drill", name: "Hive Breaker Drill", code: "LUDRDD", icon: "Hive Breaker Drill.svg", fonte: "w" },
   { id: "dark-fluid-vessel", name: "Dark Fluid Vessel", code: "ULRDUU", icon: "Dark Fluid Vessel.svg", fonte: "w" },
+  // --- Stratagemmi di missione con codice condiviso o doppio (come da wiki) ---
 ];

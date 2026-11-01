@@ -11,7 +11,7 @@ for (const s of S) {
   codes.set(s.code, s.name);
 }
 for (const a of S) for (const b of S)
-  if (a !== b && b.code.length > a.code.length && b.code.startsWith(a.code)) {
+  if (a !== b && a.code !== b.code && b.code.length > a.code.length && b.code.startsWith(a.code)) {
     console.log("Prefisso:", a.name, `(${a.code})`, "è l'inizio di", b.name, `(${b.code})`); problemi++;
   }
 console.log(`${S.length} stratagemmi, ${problemi} problemi`);

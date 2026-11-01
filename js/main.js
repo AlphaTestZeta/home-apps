@@ -57,3 +57,6 @@ carousel.addEventListener("wheel", (e) => {
     e.preventDefault();
   }
 }, { passive: false });
+
+// App installabile e utilizzabile senza rete
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});

@@ -13,7 +13,8 @@
 
 * { box-sizing: border-box; }
 
-html, body { height: 100%; margin: 0; }
+html, body { height: 100%; margin: 0; overscroll-behavior: none; }
+body { height: 100dvh; }
 
 body {
   background: linear-gradient(to bottom, var(--teal) 0%, var(--teal) 8%, var(--blue) 60%, var(--blue) 100%) no-repeat;

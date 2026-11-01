@@ -4,6 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
   <title>Stratagemmi</title>
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <link rel="apple-touch-icon" href="../../pwa/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Stratagemmi">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,10 +25,7 @@
   </svg>
 
   <!-- Stratagemma attivato: resta finché non si tocca lo schermo -->
-  <div id="result" class="result" hidden>
-    <img id="icon" alt="">
-    <p id="label"></p>
-  </div>
+  <div id="result" class="result" hidden></div>
 
   <!-- Sequenza inserita finora -->
   <div id="seq" class="seq" aria-live="polite"></div>

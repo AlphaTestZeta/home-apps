@@ -55,25 +55,31 @@ html, body {
   .arrow.show { animation-duration: .01s; }
 }
 
-/* Stratagemma attivato */
+/* Stratagemma attivato (uno o più, se il codice è condiviso) */
 .result {
   position: fixed;
   inset: 0;
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  gap: 4vmin;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5vmin;
+  padding: 4vmin;
   background: var(--nero);
   z-index: 1;
 }
 .result[hidden] { display: none; }
-.result img { width: min(70vw, 70vh); height: min(70vw, 70vh); object-fit: contain; }
+.result figure { margin: 0; display: grid; justify-items: center; gap: 3vmin; }
+.result img {
+  width: min(calc(70vw / var(--n, 1)), 62vh);
+  height: min(calc(70vw / var(--n, 1)), 62vh);
+  object-fit: contain;
+}
 .result img[hidden] { display: none; }
-.result p {
-  margin: 0;
+.result figcaption {
   max-width: 80vw;
   text-align: center;
-  font: 700 clamp(28px, 8vmin, 72px)/1.1 system-ui, sans-serif;
+  font: 700 clamp(24px, 6vmin, 60px)/1.1 system-ui, sans-serif;
 }
 
 /* Sequenza in basso */
