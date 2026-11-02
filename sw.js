@@ -1,12 +1,18 @@
 // Service worker: tiene l'app in memoria, così funziona anche senza rete.
 // L'elenco dei file e la versione si aggiornano con:  node tools/aggiorna-sw.js
-const VERSION = "v5802de37";
+const VERSION = "vbb5a5a2a";
 const CACHE = "home-apps-" + VERSION;
 const ARCHIVIO = [
 // <ARCHIVIO>
   "./",
+  "apps/orologio/",
   "apps/stratagemmi/",
+  "apps/orologio/app.js",
+  "apps/orologio/icon.png",
+  "apps/orologio/index.html",
+  "apps/orologio/style.css",
   "apps/stratagemmi/app.js",
+  "apps/stratagemmi/icon.png",
   "apps/stratagemmi/index.html",
   "apps/stratagemmi/stratagems.js",
   "apps/stratagemmi/style.css",

@@ -3,7 +3,10 @@
 Bozza della home page: carosello orizzontale di icone quadrate (app) con barra di scorrimento.
 
 ## Struttura
-- `index.html` – pagina
+- `index.html` – home
+- `apps/stratagemmi/` – app 1: stratagemmi Helldivers
+- `apps/orologio/` – app 2: orologio digitale
+- `sw.js` + `manifest.webmanifest` – app installabile e offline (aggiorna con `node tools/aggiorna-sw.js`)
 - `css/style.css` – grafica (sfondo sfumato, icone, barra)
 - `js/apps.js` – **elenco delle app** (qui si modificano nomi e link)
 - `js/main.js` – carosello e barra di scorrimento

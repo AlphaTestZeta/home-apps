@@ -1,0 +1,64 @@
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body { height: 100dvh; }
+
+/* Tasto home: piccolo e quasi nascosto, in alto a sinistra */
+.back {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 6px);
+  left: calc(env(safe-area-inset-left, 0px) + 8px);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  font: 28px/1 system-ui, sans-serif;
+  color: #fff;
+  opacity: .18;
+  text-decoration: none;
+  z-index: 2;
+}
+.back:active { opacity: .6; }
+
+/* Orologio a 7 segmenti */
+.clock {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vmin;
+}
+.clock svg { height: min(70vh, 30vw); width: auto; display: block; }
+.seg { fill: rgba(255, 255, 255, .07); }   /* segmento spento */
+.seg.on { fill: #fff; }                    /* segmento acceso */
+.dot { fill: #fff; animation: lampeggia 2s steps(1, end) infinite; }
+@keyframes lampeggia { 0% { opacity: 1; } 50% { opacity: .2; } }
+@media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+
+/* Telefono in verticale: l'app va usata in orizzontale */
+@media (orientation: portrait) and (pointer: coarse) {
+  body::after {
+    content: "Ruota il telefono in orizzontale";
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 10vw;
+    text-align: center;
+    font: 700 6vw/1.2 system-ui, sans-serif;
+    color: #fff;
+    background: rgba(0, 0, 0, .92);
+    z-index: 100;
+  }
+}

@@ -57,7 +57,9 @@ body {
   display: block;
   color: inherit;
   text-decoration: none;
+  overflow: hidden;
 }
+.app img { width: 100%; height: 100%; display: block; object-fit: cover; pointer-events: none; -webkit-user-drag: none; }
 .app:focus-visible { outline: 4px solid #000; outline-offset: 4px; }
 
 /* Barra di scorrimento personalizzata */

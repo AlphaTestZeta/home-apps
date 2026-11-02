@@ -13,6 +13,7 @@
     { "src": "pwa/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
   ],
   "shortcuts": [
-    { "name": "Stratagemmi", "url": "apps/stratagemmi/index.html" }
+    { "name": "Stratagemmi", "url": "apps/stratagemmi/index.html" },
+    { "name": "Orologio", "url": "apps/orologio/index.html" }
   ]
 }

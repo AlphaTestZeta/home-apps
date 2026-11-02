@@ -8,6 +8,13 @@ for (const app of APPS) {
   a.className = "app";
   a.href = app.url;
   a.setAttribute("aria-label", app.name);
+  if (app.icon) {
+    const img = document.createElement("img");
+    img.src = app.icon;
+    img.alt = "";
+    img.draggable = false;
+    a.appendChild(img);
+  }
   carousel.appendChild(a);
 }
 

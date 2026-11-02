@@ -15,7 +15,8 @@ const files = [];
 const h = crypto.createHash("md5");
 files.forEach((f) => { h.update(f); h.update(fs.readFileSync(path.join(root, f))); });
 const version = "v" + h.digest("hex").slice(0, 8);
-const lista = ["./", "apps/stratagemmi/", ...files].map((f) => `  ${JSON.stringify(f.split("/").map(encodeURIComponent).join("/").replace(/^%2E%2F$/, "./").replace(/^\.%2F$/, "./"))},`).join("\n");
+const cartelleApp = fs.readdirSync(path.join(root, "apps")).filter((n) => fs.existsSync(path.join(root, "apps", n, "index.html"))).map((n) => `apps/${n}/`);
+const lista = ["./", ...cartelleApp, ...files].map((f) => `  ${JSON.stringify(f.split("/").map(encodeURIComponent).join("/").replace(/^%2E%2F$/, "./").replace(/^\.%2F$/, "./"))},`).join("\n");
 let sw = fs.readFileSync(path.join(root, "sw.js"), "utf8");
 sw = sw.replace(/const VERSION = ".*?";/, `const VERSION = "${version}";`)
        .replace(/\/\/ <ARCHIVIO>[\s\S]*?\/\/ <\/ARCHIVIO>/, `// <ARCHIVIO>\n${lista}\n// </ARCHIVIO>`);
